@@ -1,5 +1,5 @@
 'use client';
-import NextLink from 'next/link';
+import Link from 'next/link';
 
 const discordIcon = (
     <svg
@@ -16,11 +16,11 @@ const discordIcon = (
 function HeaderItem({url, children}: any) {
   return (
     <div className="flex flex-auto sm:flex-1">
-      <NextLink
+      <Link
         href={url}
         className='w-full text-center outline-link py-1.5 px-1.5 xs:px-3 sm:px-4 rounded-full capitalize'>
         {children}
-      </NextLink>
+      </Link>
     </div>
   );
 }
@@ -32,11 +32,11 @@ export default function Header() {
         className='items-center w-full flex justify-between bg-white border-b border-gray-300 px-1.5 lg:pe-12 lg:ps-12 z-50'>
         <div className="flex items-center justify-between w-full h-16">
           <div className="flex 3xl:flex-1 align-center">
-            <NextLink
+            <Link
               href="/"
               className='p-1 text-2xl font-semibold'>
                 <span>AP(roject)</span>
-            </NextLink>
+            </Link>
           </div>
         </div>
         <div className="text-lg justify-center items-center flex 3xl:flex-1 flex-row 3xl:justify-end">
@@ -52,14 +52,14 @@ export default function Header() {
           </div>
           <div className="flex items-center -space-x-2.5 xs:space-x-0 ">
             <div className="flex">
-              <NextLink
+              <Link
                 href="https://discord.gg/apstudents"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="Join Discord"
                 className="flex items-center justify-center">
                 {discordIcon}
-              </NextLink>
+              </Link>
             </div>
           </div>
         </div>
